@@ -1,9 +1,11 @@
 import Vapor
 import Logging
 
+let TGBOT: TGBotConnection = .init()
 @main
 enum Entrypoint {
     static func main() async throws {
+
         var env = try Environment.detect()
         try LoggingSystem.bootstrap(from: &env)
         
